@@ -6,7 +6,8 @@ addons:
   postgresql: "9.3"
 
 env:
-  - BUILD_TOOL=maven
+  global:
+    - BUILD_TOOL=maven
 
 before_script:
   - psql -c "create database catwatch;" -U postgres -h localhost
@@ -15,4 +16,3 @@ before_script:
 
 script:
   - ./build.sh
-
