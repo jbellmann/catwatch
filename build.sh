@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 set -e
 
-mvn clean install
+mvn clean install --batch-mode
